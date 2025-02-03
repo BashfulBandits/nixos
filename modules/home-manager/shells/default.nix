@@ -5,5 +5,6 @@
     ./zsh.nix
     ./tmux.nix
     ./shell-utils.nix
+    ./omp.nix
   ];
 }

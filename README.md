@@ -1,2 +1,2 @@
 # nixos
-My nixos config using flakes
+My nixos config
