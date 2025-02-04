@@ -10,40 +10,15 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       ../../modules/productivity/default.nix
-      ../../modules/entertainment/entertainment.nix
-      ../../modules/utils/default.nix
-      ../../modules/system/hyperland.nix
-    ];
 
-  # Bootloader.
-  #boot.loader.systemd-boot.enable = true;
-  boot.loader = {
-    efi = {
-      canTouchEfiVariables = true;
-      # assuming /boot is the mount point of the  EFI partition in NixOS (as the installation section recommends).
-      efiSysMountPoint = "/boot";
-    };
-    grub = {
-      # despite what the configuration.nix manpage seems to indicate,
-      # as of release 17.09, setting device to "nodev" will still call
-      # `grub-install` if efiSupport is true
-      # (the devices list is not used by the EFI grub install,
-      # but must be set to some value in order to pass an assert in grub.nix)
-      devices = [ "nodev" ];
-      efiSupport = true;
-      enable = true;
-      # set $FS_UUID to the UUID of the EFI partition
-      extraEntries = ''
-        menuentry "Windows" {
-        insmod part_gpt
-        insmod fat
-        insmod search_fs_uuid
-        insmod chain
-        search --fs-uuid --set=root $FS_UUID
-        chainloader /EFI/Microsoft/Boot/bootmgfw.efi
-      }'';
-    };
-  };
+      ../../modules/entertainment/entertainment.nix
+
+      ../../modules/utils/default.nix
+
+      ../../modules/system/hyperland.nix
+      ../../modules/system/sound.nix
+      ../../modules/system/grub.nix
+    ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -105,19 +80,6 @@
     xkbVariant = "colemak_dh";
   };
 
-  # Enableing hyprlnd on NixOs
-  #programs.hyprland = {
-  #  enable = true;
-  #  nvidiaPatches = true;
-  #  xwayland.enable = true;
-  #};
-
-  #environment.sessionVariables = {
-  #  enable = true;
-  #  WLR_NO_HARDWARE_CURSORS = "1";
-  #  NIXOS_OZONE_WL = "1";
-  #};
-
   hardware.opengl = {
     enable = true;
     #driSupport = true;
@@ -138,21 +100,9 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  #sound.enable = false;
-  security.rtkit.enable = false;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    jack.enable = true;
-    wireplumber.enable = true;
-
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  };
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
