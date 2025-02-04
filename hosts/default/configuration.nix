@@ -12,6 +12,7 @@
       ../../modules/productivity/default.nix
       ../../modules/entertainment/entertainment.nix
       ../../modules/utils/default.nix
+      ../../modules/system/hyperland.nix
     ];
 
   # Bootloader.
@@ -89,7 +90,7 @@
       enable = true;
       luaModules = with pkgs.luaPackages; [
         luarocks
-	luadbi-mysql
+	      luadbi-mysql
       ];
     };
   };

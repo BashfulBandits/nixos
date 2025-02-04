@@ -10,7 +10,6 @@
     ../../modules/home-manager/shells/default.nix
     ../../modules/home-manager/terminals/default.nix
     ../../modules/home-manager/editors/default.nix
-    ../../modules/home-manager/window-managers/default.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
