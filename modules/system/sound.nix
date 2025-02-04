@@ -1,8 +1,10 @@
-{ inputs, ... }
+{ inputs, ... }:
 
 { 
-  # Enable sound with pipewire.
+  # For better audio
   security.rtkit.enable = true;
+
+  # Enable sound with pipewire.
   services.pipewire = {
     enable = true;
     alsa.enable = true;
