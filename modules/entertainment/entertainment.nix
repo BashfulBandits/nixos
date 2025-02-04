@@ -17,6 +17,7 @@
     lutris
     mangohud
     protonup
+    bottles
     osu-lazer-bin
   ];
 }

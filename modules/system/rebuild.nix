@@ -1,5 +1,5 @@
-{ inputs, writeShellScript, ... }:
+{ pkgs, ... }:
 
 {
-  
+   
 }
