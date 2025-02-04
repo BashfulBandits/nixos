@@ -191,6 +191,8 @@
     clang
     gcc14
     cmake
+
+    (import ../../modules/system/rebuild.nix {inherit pkgs; })
   ];
 
   # Flatpak
