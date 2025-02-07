@@ -29,13 +29,48 @@
     initExtra = ''
       eval "$(zoxide init zsh)"
       eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/default.toml)"
-    '';
+      eval "$(fzf --zsh)"
 
-    #zplug = {
-      #enable = true;
-      #plugins = [
-        #{ name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ];}
-      #];
-    #};
+      autoload -U compinit && compinit
+
+      bindkey -e
+      bindkey '^p' history-search-backward
+      bindkey '^n' history-search-forward
+
+      zstyle ':completion:*' matcher-list 'm:{a-z}-{A-Za-Z}'
+      zstyle ':completion:*' menu no
+    '';
+    #zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
+    zplug = {
+      enable = true;
+      plugins = [
+        {
+          name = "zsh-users/zsh-syntax-highlighting";
+          tags = ["as:plugin"];
+        }
+        {
+          name = "zsh-users/zsh-completions";
+          tags = ["as:plugin"];
+        }
+        {
+          name = "zsh-users/zsh-autosuggestions";
+          tags = ["as:plugin"];
+        }
+        {
+          name = "Aloxaf/fzf-tab";
+          tags = ["as:plugin"];
+        }
+      ];
+    };
+
+    history = {
+      size = 10000;
+      path = "~/.zsh_history";
+      save = 10000;
+      saveNoDups = true;
+      ignoreAllDups = true;
+      findNoDups = true;
+    };
   };
 }

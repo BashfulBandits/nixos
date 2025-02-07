@@ -12,8 +12,4 @@
   programs.zoxide = {
     enable = true;
   };
-
-  programs.fzf = {
-    enable = true;
-  };
 }
