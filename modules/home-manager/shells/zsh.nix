@@ -18,7 +18,8 @@
 
       # Change ~/nixos#"default" to whatever host you are using
       #osr  = "sudo nixos-rebuild switch --flake ~/nixos#default"; 
-      osr = "nix-rebuild-script";
+      #osr = "nix-rebuild-script";
+      osrd = "nix-rebuild-script default";
     };
 
     defaultKeymap = "emacs";
@@ -66,7 +67,7 @@
 
     history = {
       size = 10000;
-      path = "~/.zsh_history";
+      path = "$HOME/.zsh_history";
       save = 10000;
       saveNoDups = true;
       ignoreAllDups = true;

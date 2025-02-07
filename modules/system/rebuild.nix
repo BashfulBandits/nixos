@@ -1,6 +1,8 @@
 { pkgs, ... }:
 
 pkgs.writeShellScriptBin "nix-rebuild-script" ''
-  echo "Hello, world." | ${pkgs.cowsay}/bin/cowsay | ${pkgs.lolcat}/bin/lolcat
+  cd $HOME/nixos
+  ${pkgs.git}/bin/git add --all
+  sudo nixos-rebuild switch --flake $HOME/nixos#$1
 ''
 
