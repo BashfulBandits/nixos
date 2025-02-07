@@ -17,7 +17,8 @@
       cd = "z";
 
       # Change ~/nixos#"default" to whatever host you are using
-      osr  = "sudo nixos-rebuild switch --flake ~/nixos#default"; 
+      #osr  = "sudo nixos-rebuild switch --flake ~/nixos#default"; 
+      osr = "nix-rebuild-script";
     };
 
     defaultKeymap = "emacs";
@@ -33,11 +34,10 @@
 
       autoload -U compinit && compinit
 
-      bindkey -e
       bindkey '^p' history-search-backward
       bindkey '^n' history-search-forward
 
-      zstyle ':completion:*' matcher-list 'm:{a-z}-{A-Za-Z}'
+      zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-Z}'
       zstyle ':completion:*' menu no
     '';
     #zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
