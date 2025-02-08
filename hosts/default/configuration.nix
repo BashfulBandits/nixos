@@ -163,8 +163,6 @@
     ripgrep
     picom
     yazi
-    rofi-wayland 
-    wofi
     libnotify
     tree-sitter
     binutils
