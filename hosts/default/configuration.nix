@@ -11,6 +11,8 @@
       inputs.home-manager.nixosModules.default
       ../../modules/productivity/default.nix
 
+      ../../modules/coding/default.nix
+
       ../../modules/entertainment/entertainment.nix
 
       ../../modules/utils/default.nix

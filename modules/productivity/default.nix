@@ -3,7 +3,6 @@
 {
   imports = [
     ./art/default.nix
-    ./coding/default.nix
     ./organization/default.nix
   ];
 
