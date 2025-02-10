@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ pkgs, ... }:
 
 { 
   # For better audio
@@ -13,4 +13,8 @@
     jack.enable = true;
     wireplumber.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    pavucontrol
+  ];
 }
