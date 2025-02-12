@@ -185,7 +185,6 @@
     gimp
     python312Packages.pip   
     python312Full
-    trunk
 
     libgcc
     gcc14
