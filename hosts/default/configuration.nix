@@ -60,10 +60,6 @@
   services.xserver = {
     enable = true;
 
-    displayManager = {
-      defaultSession = "none+awesome";
-    };
-
     windowManager.awesome = {
       enable = true;
       luaModules = with pkgs.luaPackages; [
@@ -73,20 +69,21 @@
     };
   };
 
+  services.displayManager.defaultSession = "none+awesome";
+
   # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "colemak_dh";
+    variant = "colemak_dh";
   };
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
-    #driSupport = true;
-    driSupport32Bit = true;
+    enable32Bit = true;
   };
 
   services.xserver.videoDrivers = ["nvidia"];
@@ -188,7 +185,7 @@
 
     kdePackages.kscreen
 
-    (import ../../modules/system/rebuild.nix {inherit pkgs; })
+    (import ../../scripts/rebuild-script.nix {inherit pkgs; })
   ];
 
   # Flatpak

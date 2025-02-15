@@ -1,9 +1,9 @@
-{ pkgs, inputs, config, ... }:
+{ ... }:
 
 {
   programs.kitty = {
     enable = true;
-    theme  = "Catppuccin-Macchiato";
+    themeFile  = "Catppuccin-Macchiato";
     extraConfig = ''
       font_size 16.0
       font_family FantasqueSansM Nerd Font
