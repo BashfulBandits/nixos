@@ -11,9 +11,16 @@
   in 
   {
     devShells."x86_64-linux".default = pkgs.mkShell {
+        #shellHook = ''
+        #zsh
+        #'';
+
       packages = [ 
-          pkgs.clang pkgs.clang-tools pkgs.cmake
-          pkgs.neovim 
+          pkgs.pkg-config pkgs.openssl
+          pkgs.rustup pkgs.tailwindcss
+          pkgs.trunk pkgs.cargo-watch
+          pkgs.bacon
+          pkgs.neovim pkgs.zsh
       ];
     };
   };

@@ -19,5 +19,7 @@
     protonup
     bottles
     osu-lazer-bin
+    #lime3ds
+    melonDS
   ];
 }

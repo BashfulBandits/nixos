@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    aseprite
+    #aseprite
     krita
     blender
   ];

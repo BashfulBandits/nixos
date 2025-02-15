@@ -14,7 +14,6 @@
       packages = [ 
           pkgs.tailwindcss pkgs.typescript pkgs.nodejs 
           pkgs.live-server
-          pkgs.neovim 
       ];
     };
   };

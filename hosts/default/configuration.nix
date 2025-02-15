@@ -176,18 +176,17 @@
     #opentabletdriver
     p7zip
     pavucontrol
-    davinci-resolve
-    appimage-run
+    #davinci-resolve
     toybox
 
     wineWowPackages.stable
     nemo
     gimp
-    python312Packages.pip   
-    python312Full
 
     libgcc
     gcc14
+
+    kdePackages.kscreen
 
     (import ../../modules/system/rebuild.nix {inherit pkgs; })
   ];

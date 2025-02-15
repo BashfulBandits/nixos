@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -7,11 +7,11 @@
   home.homeDirectory = "/home/bash";
 
   imports = [
-    ../../modules/home-manager/shells/default.nix
-    ../../modules/home-manager/terminals/default.nix
-    ../../modules/home-manager/editors/default.nix
-    ../../modules/home-manager/app-launchers/default.nix
-    ../../modules/home-manager/window-managers/default.nix
+    ../../home-manager/shells/default.nix
+    ../../home-manager/terminals/default.nix
+    ../../home-manager/editors/default.nix
+    ../../home-manager/app-launchers/default.nix
+    ../../home-manager/window-managers/default.nix
   ];
 
   # This value determines the Home Manager release that your configuration is
