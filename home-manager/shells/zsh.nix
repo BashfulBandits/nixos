@@ -18,8 +18,8 @@
 
       # Change ~/nixos#"default" to whatever host you are using
       #osr  = "sudo nixos-rebuild switch --flake ~/nixos#default"; 
-      #osr = "nix-rebuild-script";
-      osrd = "nix-rebuild-script default";
+      #osr = "nixos-rebuild-script";
+      osrd = "nixos-rebuild-script default";
     };
 
     defaultKeymap = "emacs";

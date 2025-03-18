@@ -139,7 +139,7 @@
       })
     )
 
-    librewolf
+    librewolf-bin
     jack2
     libjack2
     cava
@@ -170,7 +170,6 @@
     wget
     google-chrome
     unzip
-    #opentabletdriver
     p7zip
     pavucontrol
     #davinci-resolve
@@ -184,6 +183,8 @@
     gcc14
 
     kdePackages.kscreen
+
+    calibre
 
     (import ../../scripts/rebuild-script.nix {inherit pkgs; })
   ];
