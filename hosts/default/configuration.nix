@@ -172,7 +172,7 @@
     unzip
     p7zip
     pavucontrol
-    #davinci-resolve
+    davinci-resolve
     toybox
 
     wineWowPackages.stable
