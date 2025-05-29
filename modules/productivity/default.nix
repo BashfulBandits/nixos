@@ -6,7 +6,6 @@
     ./organization/default.nix
   ];
 
-  environment.systemPackages = with pkgs; [
-    dolphin
-  ];
+  #environment.systemPackages = with pkgs; [
+  #];
 }

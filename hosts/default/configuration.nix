@@ -116,8 +116,8 @@
     description = "Bash";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
-      kate
+      thunderbird
+      #kate
     ];
   };
 

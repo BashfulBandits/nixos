@@ -1,2 +1,4 @@
 # nixos
-My nixos config
+
+# Installation
+
