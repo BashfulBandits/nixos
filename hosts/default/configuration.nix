@@ -111,20 +111,19 @@
   # services.xserver.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.bash = {
+  users.users.ontos = {
     isNormalUser = true;
-    description = "Bash";
+    description = "Ontos";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      thunderbird
-      #kate
+
     ];
   };
 
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "bash" = import ./home.nix;
+      "ontos" = import ./home.nix;
     };
   };
 
