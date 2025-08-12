@@ -1,0 +1,26 @@
+melonDS 1.0
+https://melonds.kuribo64.net
+Failed to open "/home/ontos/.config/melonDS/melonDS.toml" with FileMode 0x1 (effective mode "rb")
+Failed to open "/home/ontos/.config/melonDS/melonDS.toml" with FileMode 0x1 (effective mode "rb")
+Failed to open "/home/ontos/.config/melonDS/melonDS.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.2.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.3.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.4.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.5.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.6.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.7.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.8.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.9.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.10.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.11.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.12.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.13.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.14.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.15.ini" with FileMode 0x11 (effective mode "r")
+Failed to open "/home/ontos/.config/melonDS/melonDS.16.ini" with FileMode 0x11 (effective mode "r")
+MP comm init OK
+Audio output frequency: 48000 Hz
+Failed to open "/home/ontos/.config/melonDS/melonDS.toml" with FileMode 0x1 (effective mode "rb")
+Opened "/home/ontos/.config/melonDS/melonDS.toml" with FileMode 0x1 (effective mode "rb")
+Opened "/home/ontos/.config/melonDS/melonDS.toml" with FileMode 0x20 (effective mode "ab")
