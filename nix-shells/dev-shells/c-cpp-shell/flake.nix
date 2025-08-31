@@ -1,33 +1,47 @@
 {
-  description = "A front-end dev-shell flake";
+  description = "cracking the coding interview";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs }: 
-  let
-    pkgs = nixpkgs.legacyPackages."x86_64-linux";
-  in 
-  {
-    devShells."x86_64-linux".default = pkgs.mkShell {
-      packages = [ 
-          pkgs.clang pkgs.clang-tools pkgs.cmake
-          pkgs.neovim 
-      ];
-      buildInputs = [
-          pkgs.clang #pkgs.clang-tools
-          pkgs.cmake pkgs.gcc14 pkgs.libgcc
-          pkgs.ccls
-      ];
+  outputs = { self, nixpkgs, flake-utils, ... }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+        let
+          pkgs = import nixpkgs { inherit system; };
+          llvm = pkgs.llvmPackages_latest;
+          lib = nixpkgs.lib;
 
-    shellHook = ''
-      export LD_LIBRARY_PATH=${pkgs.clang}/lib:$LD_LIBRARY_PATH
-      #export LD_LIBRARY_PATH=${pkgs.clang-tools}/lib:$LD_LIBRARY_PATH 
-      export LD_LIBRARY_PATH=${pkgs.ccls}/lib:$LD_LIBRARY_PATH
-      export LD_LIBRARY_PATH=${pkgs.gcc14}/lib:$LD_LIBRARY_PATH
-      export LD_LIBRARY_PATH=${pkgs.libgcc}/lib:$LD_LIBRARY_PATH
-    '';
-    };
-  };
+        in
+          {
+            devShell = pkgs.mkShell {
+              nativeBuildInputs = [
+                # builder
+                # p.gnumake
+                # p.bear
+                pkgs.cmake
+                # debugger
+                llvm.lldb
+
+                # XXX: the order of include matters
+                pkgs.clang-tools
+                llvm.clang # clangd
+
+                pkgs.gtest
+              ];
+
+              buildInputs = [
+                # stdlib for cpp
+                llvm.libcxx
+              ];
+
+              # CXXFLAGS = "-std=c++17";
+              CPATH = builtins.concatStringsSep ":" [
+                (lib.makeSearchPathOutput "dev" "include" [ llvm.libcxx ])
+                (lib.makeSearchPath "resource-root/include" [ llvm.clang ])
+              ];
+            };
+          }
+    );
 }
