@@ -6,6 +6,7 @@
     ./organization/default.nix
   ];
 
-  #environment.systemPackages = with pkgs; [
-  #];
+  environment.systemPackages = with pkgs; [
+    kdePackages.kdenlive
+  ];
 }

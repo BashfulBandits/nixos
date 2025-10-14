@@ -6,6 +6,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    mpv
     stow
     bitwarden-desktop
     bitwarden-cli 
