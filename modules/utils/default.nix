@@ -6,6 +6,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    pkgs.CuboCore.coreshot
+
     mpv
     stow
     bitwarden-desktop
