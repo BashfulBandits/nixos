@@ -17,7 +17,6 @@
 
       ../../modules/utils/default.nix
 
-      ../../modules/system/hyperland.nix
       ../../modules/system/sound.nix
       ../../modules/system/grub.nix
       ../../modules/system/fonts.nix
@@ -54,6 +53,11 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+
+
+  # Needed for hyprland home-manager config to function.
+  programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   # TabletDrivers
   hardware.opentabletdriver.enable = true;
