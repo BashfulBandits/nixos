@@ -1,30 +1,40 @@
 {  pkgs, inputs, lib, ... }:
 
 {
+  imports = [../bars/waybar.nix];
+  
   wayland.windowManager.hyprland = {
     enable = true;
 
     settings = {
       "$mainMod" = "SUPER";
+      "$shiftMod" = "SUPER_SHIFT";
+
       "$terminal" = "kitty";
       "$browser" = "librewolf";
-      "$menu" = "raffi";
+      "$menu" = "fuzzel";
+
+      monitor = [
+        "DP-2, 2560x1440@240, 0x0, 1"
+        "DP-3, 1920x1080@144, 2560x0, 1"
+      ];
 
       bind = [
         "$mainMod, T, exec, $terminal"
         "$mainMod, F, exec, $browser"
         "$mainMod, Q, exec, $terminal"
-        "$mainMod, C, killactive,"
-        "$mainMod, V, togglefloating,"
         "$mainMod, P, exec, $menu"
 
-        "$SUPER_SHIFT, M, exit,"
+        "$mainMod, V, togglefloating,"
+        "$shiftMod, C, killactive,"
+
+        "$shiftMod, Q, exit,"
         
         # Move focus with mainMod + arrow keys
-        "$mainMod, left, movefocus, l"
-        "$mainMod, right, movefocus, r"
-        "$mainMod, up, movefocus, u"
-        "$mainMod, down, movefocus, d"
+        "$mainMod, left, movefocus, H"
+        "$mainMod, right, movefocus, L"
+        "$mainMod, up, movefocus, K"
+        "$mainMod, down, movefocus, J"
         
         # Switch workspaces with mainMod + [0-9]
         "$mainMod, 1, workspace, 1"
@@ -66,7 +76,13 @@
       ];
 
       exec-once = [
+        "kitty"
+
+        "waybar"
         "nm-applet"
+
+        "awww-daemon"
+        "awww img ~/Pictures/Wallpapers/MainCityWallpaper.png"
       ];
 
       input = {

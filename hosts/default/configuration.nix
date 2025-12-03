@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
+
       ../../modules/productivity/default.nix
 
       ../../modules/coding/default.nix
@@ -23,6 +24,8 @@
       ../../modules/system/nix-utils.nix
 
       ../../modules/users/ontos.nix
+
+      ../../modules/ricing/stylix.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

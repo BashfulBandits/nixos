@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -17,5 +17,7 @@
     xorg.xmodmap
     xbindkeys
     xbindkeys-config
+
+    inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
   ];
 }
