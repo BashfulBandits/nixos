@@ -20,6 +20,7 @@
       ../../modules/system/sound.nix
       ../../modules/system/grub.nix
       ../../modules/system/fonts.nix
+      ../../modules/system/nix-utils.nix
 
       ../../modules/users/ontos.nix
     ];
@@ -182,7 +183,7 @@
     calibre
 
 
-    (import ../../scripts/rebuild-script.nix {inherit pkgs; })
+    (import ../../scripts/nix-os-rebuild.nix {inherit pkgs; })
   ];
 
   # Flatpak

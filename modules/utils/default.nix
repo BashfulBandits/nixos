@@ -3,6 +3,7 @@
 {
   imports = [
     ./virtual_machines.nix
+    ./launchers.nix
   ];
 
   environment.systemPackages = with pkgs; [

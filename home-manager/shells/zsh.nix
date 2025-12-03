@@ -28,7 +28,7 @@
 
     '';
 
-    initExtra = ''
+    initContent = ''
       eval "$(zoxide init zsh)"
       eval "$(oh-my-posh init zsh --config $HOME/dotfiles/.config/ohmyposh/default.toml)"
       eval "$(fzf --zsh)"
