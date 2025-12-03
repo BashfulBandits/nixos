@@ -5,14 +5,14 @@
     enable = true;
 
     settings = {
-      "$mainmod" = "SUPER";
+      "$mainMod" = "SUPER";
       "$terminal" = "kitty";
       "$browser" = "librewolf";
       "$menu" = "raffi";
 
       bind = [
-        "$mainmod, T, exec, $terminal"
-        "$mainmod, F, exec, $browser"
+        "$mainMod, T, exec, $terminal"
+        "$mainMod, F, exec, $browser"
         "$mainMod, Q, exec, $terminal"
         "$mainMod, C, killactive,"
         "$mainMod, V, togglefloating,"
