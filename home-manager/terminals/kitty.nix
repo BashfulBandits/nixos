@@ -1,10 +1,15 @@
-{ ... }:
+{ config, ... }:
 
 {
   programs.kitty = {
     enable = true;
-    themeFile  = "Catppuccin-Macchiato";
-    extraConfig = ''
+    #themeFile  = "Catppuccin-Macchiato";
+    settings = with config.colorScheme.palette; {  
+      foreground = "#${base05}";
+      background = "#${base00}";
+    };
+
+    extraConfig = with config.colorScheme.palette; ''
       font_size 16.0
       font_family FantasqueSansM Nerd Font
       background_opacity 0.85

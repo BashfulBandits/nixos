@@ -7,6 +7,7 @@
     awww.url = "git+https://codeberg.org/LGFae/awww";
 
     stylix.url = "github:danth/stylix";
+    nix-colors.url = "github:misterio77/nix-colors";
 
     hyprland.url = "github:hyprwm/Hyprland";
 
