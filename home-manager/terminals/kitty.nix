@@ -5,8 +5,8 @@
     enable = true;
     #themeFile  = "Catppuccin-Macchiato";
     settings = with config.colorScheme.palette; {  
-      foreground = "#${base05}";
-      background = "#${base00}";
+      foreground = "#${base1}";
+      background = "#${base1}";
     };
 
     extraConfig = with config.colorScheme.palette; ''
