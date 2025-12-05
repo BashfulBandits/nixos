@@ -1,5 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [];
+  imports = [
+    ./kitty.nix
+  ];
 }

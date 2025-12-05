@@ -10,19 +10,22 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
 
-      ../../modules/productivity/default.nix
+      ../../modules/apps/core/browsers
+      ../../modules/system/terminals
+
+      #../../modules/productivity/default.nix
 
       ../../modules/coding/default.nix
 
-      ../../modules/entertainment/entertainment.nix
+      #../../modules/entertainment/entertainment.nix
 
-      ../../modules/utils/default.nix
+      ../../modules/system/utils/default.nix
+      ../../modules/system/utils/nix-utils.nix
 
-      ../../modules/system/sound.nix
-      ../../modules/system/grub.nix
-      ../../modules/system/fonts.nix
-      ../../modules/system/nix-utils.nix
-      ../../modules/system/network.nix
+      ../../modules/nix-settings/fonts/fonts.nix
+      ../../modules/nix-settings/sound.nix
+      ../../modules/nix-settings/grub.nix
+      ../../modules/nix-settings/network.nix
 
       ../../modules/users/ontos.nix
     ];
