@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    matugen = {
+      url = "github:InioX/Matugen";
+    };
+
     awww.url = "git+https://codeberg.org/LGFae/awww";
 
     stylix.url = "github:danth/stylix";

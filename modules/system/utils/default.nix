@@ -9,6 +9,9 @@
   environment.systemPackages = with pkgs; [
     pkgs.CuboCore.coreshot
 
+    hyprshot
+    wl-clipboard
+
     mpv
     stow
     bitwarden-desktop

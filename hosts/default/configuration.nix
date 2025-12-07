@@ -11,23 +11,30 @@
       inputs.home-manager.nixosModules.default
 
       ../../modules/apps/core/browsers
-      ../../modules/system/terminals
-
+      ../../modules/apps/entertainment/entertainment.nix
       #../../modules/productivity/default.nix
+
 
       ../../modules/coding/default.nix
 
-      #../../modules/entertainment/entertainment.nix
 
       ../../modules/system/utils/default.nix
       ../../modules/system/utils/nix-utils.nix
+
+      ../../modules/system/window-managers
+
+      ../../modules/system/terminals
+      ../../modules/system/bars
+
+      ../../modules/system/ricing/matugen.nix
+
 
       ../../modules/nix-settings/fonts/fonts.nix
       ../../modules/nix-settings/sound.nix
       ../../modules/nix-settings/grub.nix
       ../../modules/nix-settings/network.nix
 
-      ../../modules/users/ontos.nix
+      ../../modules/nix-settings/users/ontos.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -131,14 +138,11 @@
       })
     )
 
-    librewolf-bin
     jack2
     libjack2
     cava
     gparted
-    waybar
     eww
-    swww
     mako
     networkmanagerapplet
     feh
@@ -158,7 +162,6 @@
     tree-sitter
     binutils
     languagetool
-    firefox
     wget
     google-chrome
     unzip

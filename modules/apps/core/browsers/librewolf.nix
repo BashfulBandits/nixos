@@ -1,8 +1,7 @@
 { pkgs, ... }:
-
 {
-  programs.firefox = {
-    enable = true;
-    package = pkgs.librewolf;
-  };
+  environment.systemPackages = with pkgs; [
+    librewolf
+    pywalfox-native
+  ];
 }
