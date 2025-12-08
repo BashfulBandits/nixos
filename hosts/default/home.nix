@@ -7,12 +7,12 @@
   home.homeDirectory = "/home/ontos";
 
   imports = [
-    ../../home-manager/shells/default.nix
+    #../../home-manager/shells/default.nix
     #../../home-manager/terminals/default.nix
     ../../home-manager/editors/default.nix
-    ../../home-manager/app-launchers/default.nix
+    #../../home-manager/app-launchers/default.nix
     #../../home-manager/window-managers/default.nix
-    ../../home-manager/ricing/nix-colors.nix
+    #../../home-manager/ricing/nix-colors.nix
 
     inputs.nix-colors.homeManagerModules.default
   ];

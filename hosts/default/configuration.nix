@@ -24,8 +24,9 @@
       ../../modules/system/window-managers
 
       ../../modules/system/terminals
-      ../../modules/system/bars
+      ../../modules/system/shells
 
+      ../../modules/system/bars
       ../../modules/system/ricing/matugen.nix
 
 
@@ -187,10 +188,6 @@
 
   # Flatpak
   services.flatpak.enable = true;
-
-  # Shell
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 
   programs.nix-ld.enable = true;
   programs.appimage = {
