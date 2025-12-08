@@ -83,7 +83,7 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
+  #services.xserver.desktopManager.plasma5.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -150,7 +150,7 @@
     prismlauncher
     discord
     libreoffice
-    libsForQt5.kdenlive
+    #libsForQt5.kdenlive
     zulu8
     neofetch
     lazygit

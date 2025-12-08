@@ -16,7 +16,7 @@
     ncspot
     lutris
     mangohud
-    protonup
+    protonup-ng
     bottles
     osu-lazer-bin
     azahar
