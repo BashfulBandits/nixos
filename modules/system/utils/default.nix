@@ -4,6 +4,8 @@
   imports = [
     ./virtual_machines.nix
     ./launchers.nix
+    ./nix-utils.nix
+    ./qt.nix
   ];
 
   environment.systemPackages = with pkgs; [

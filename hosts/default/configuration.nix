@@ -40,6 +40,10 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  environment.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+    HELLO_TEST = "123Hello";
+  };
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
