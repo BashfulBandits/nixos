@@ -3,6 +3,7 @@
 {
   # Fonts
   fonts.packages = with pkgs; [
+    noto-fonts
     nerd-fonts._0xproto
     nerd-fonts._3270
     nerd-fonts.agave

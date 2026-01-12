@@ -17,9 +17,11 @@
     lutris
     mangohud
     protonup-ng
-    bottles
     osu-lazer-bin
     azahar
     melonDS
+    prismlauncher
+    jdk25
+    zulu8
   ];
 }

@@ -10,6 +10,9 @@
 
     awww.url = "git+https://codeberg.org/LGFae/awww";
 
+    astal.url = "github:aylur/astal";
+    ags.url = "github:aylur/ags"; 
+
     stylix.url = "github:danth/stylix";
     nix-colors.url = "github:misterio77/nix-colors";
 

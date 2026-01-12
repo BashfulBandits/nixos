@@ -8,6 +8,5 @@
 
   environment.sessionVariables = {
     QT_QPA_PLATFORMTHEME = "qt6ct";
-    HELLO_TEST = "123Hello";
   };
 }

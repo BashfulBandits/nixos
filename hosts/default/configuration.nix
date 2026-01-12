@@ -12,7 +12,7 @@
 
       ../../modules/apps/core/browsers
       ../../modules/apps/entertainment/entertainment.nix
-      #../../modules/productivity/default.nix
+      ../../modules/apps/productivity/default.nix
 
 
       ../../modules/coding/default.nix
@@ -152,11 +152,9 @@
     networkmanagerapplet
     feh
     git
-    prismlauncher
     discord
     libreoffice
     #libsForQt5.kdenlive
-    zulu8
     neofetch
     lazygit
     xclip

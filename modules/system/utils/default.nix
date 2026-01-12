@@ -6,6 +6,7 @@
     ./launchers.nix
     ./nix-utils.nix
     ./qt.nix
+    ./gtk.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -13,6 +14,8 @@
 
     hyprshot
     wl-clipboard
+
+    gscreenshot
 
     mpv
     stow
