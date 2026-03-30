@@ -12,7 +12,9 @@
 
       ../../modules/apps/core/browsers
       ../../modules/apps/entertainment/entertainment.nix
-      ../../modules/apps/productivity/default.nix
+      ../../modules/apps/productivity/organization/default.nix
+      ../../modules/apps/productivity/art/default.nix
+      ../../modules/apps/vpn.nix
 
 
       ../../modules/coding/default.nix
@@ -70,6 +72,10 @@
 
   # TabletDrivers
   hardware.opentabletdriver.enable = true;
+
+  # Required by OpenTabletDriver
+  hardware.uinput.enable = true;
+  boot.kernelModules = [ "uinput" ];
 
   # Enable the X11 windowing system.
   services.xserver = {
