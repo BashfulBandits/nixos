@@ -19,7 +19,7 @@
     protonup-ng
     osu-lazer-bin
     azahar
-    melonDS
+    melonds
     prismlauncher
     jdk25
     zulu8

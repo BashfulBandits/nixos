@@ -22,9 +22,9 @@
     bitwarden-desktop
     bitwarden-cli 
     kdePackages.dolphin
-    xorg.xmodmap
-    xbindkeys
-    xbindkeys-config
+    xmodmap
+    #xbindkeys
+    #xbindkeys-config
 
     inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
   ];

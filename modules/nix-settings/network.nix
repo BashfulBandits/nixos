@@ -17,7 +17,7 @@
 
     networkmanager = {
       enable = true;
-      #unmanaged = ["*" "except:type:wwan" "except:type:gsm"];
+      unmanaged = ["*" "except:type:wwan" "except:type:gsm"];
 
       wifi = {
         backend = "iwd";

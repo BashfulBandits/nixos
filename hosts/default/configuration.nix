@@ -161,7 +161,6 @@
     discord
     libreoffice
     #libsForQt5.kdenlive
-    neofetch
     lazygit
     xclip
     ripgrep
@@ -176,10 +175,10 @@
     unzip
     p7zip
     pavucontrol
-    davinci-resolve
+    #davinci-resolve
     toybox
 
-    wineWowPackages.stable
+    wineWow64Packages.full
     nemo
     gimp
 
