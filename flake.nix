@@ -24,6 +24,8 @@
         url = "github:nix-community/home-manager";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    kernel-latest.url = "path:./modules/system/linux/kernel";
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: {

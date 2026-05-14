@@ -10,7 +10,7 @@
     #blender 
     #cudaPackages.cudatoolkit
 
-    aseprite
+    #aseprite
     krita
   ];
 }

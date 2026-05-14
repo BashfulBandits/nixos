@@ -14,7 +14,7 @@
   environment.systemPackages = with pkgs; [
     spotify
     ncspot
-    lutris
+    #lutris
     mangohud
     protonup-ng
     osu-lazer-bin

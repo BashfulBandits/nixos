@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   # Fonts
@@ -73,4 +73,5 @@
     nerd-fonts.victor-mono
     nerd-fonts.zed-mono
   ];
+  #fonts.packages = [ "JetBrains Mono" ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
