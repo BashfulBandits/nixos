@@ -25,7 +25,7 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    kernel-latest.url = "path:./modules/system/linux/kernel";
+    kernel-latest.url = "path:./modules/system/linux/kernel/";
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: {

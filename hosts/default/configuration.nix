@@ -30,7 +30,6 @@
 
       ../../modules/system/bars
       ../../modules/system/ricing/matugen.nix
-      ../../modules/system/linux/kernal/latest.nix
 
 
       ../../modules/nix-settings/fonts/fonts.nix

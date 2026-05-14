@@ -680,11 +680,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "path": "./modules/system/linux/kernel",
+        "path": "./modules/system/linux/kernel/",
         "type": "path"
       },
       "original": {
-        "path": "./modules/system/linux/kernel",
+        "path": "./modules/system/linux/kernel/",
         "type": "path"
       },
       "parent": []
