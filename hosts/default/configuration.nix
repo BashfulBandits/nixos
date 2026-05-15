@@ -31,6 +31,8 @@
       ../../modules/system/bars
       ../../modules/system/ricing/matugen.nix
 
+      ../../modules/system/editors/default.nix
+
 
       ../../modules/nix-settings/fonts/fonts.nix
       ../../modules/nix-settings/sound.nix

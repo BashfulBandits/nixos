@@ -1,19 +1,25 @@
 {
-  description = "The full latest linux-kernel";
+  description = "Manages multiple versions of the linux-kernel";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # independent nixpkgs
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
   };
 
-  outputs = { self, nixpkgs, ... } @ inputs:
-  let
-    nixpkgs.hostPlatform = "x86_64-linux";
-  in {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./latest.nix
-      ];
-    };
+  outputs = { self, nixpkgs }: {
+    nixosModules.latest-kernel =
+      { config, pkgs, ... }:
+
+      let
+        system = pkgs.system;
+
+        # import kernel-flake's own nixpkgs
+        kernelPkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      in {
+        boot.kernelPackages = kernelPkgs.linuxPackages_latest;
+      };
   };
 }

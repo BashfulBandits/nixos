@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Extra Programs
+
     matugen = {
       url = "github:InioX/Matugen";
     };
@@ -25,7 +27,10 @@
         inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    kernel-latest.url = "path:./modules/system/linux/kernel/";
+
+    # System Config Flakes
+
+    linux-kernel-flake.url = "path:./modules/system/linux/kernel";
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: {
@@ -33,6 +38,8 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/default/configuration.nix
+        inputs.linux-kernel-flake.nixosModules.latest-kernel
+
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
       ];
