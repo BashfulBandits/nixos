@@ -38,6 +38,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/default/configuration.nix
+
         inputs.linux-kernel-flake.nixosModules.latest-kernel
 
         inputs.home-manager.nixosModules.default
