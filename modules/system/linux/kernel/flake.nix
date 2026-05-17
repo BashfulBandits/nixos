@@ -3,7 +3,6 @@
 
   inputs = {
     # independent nixpkgs
-    #nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
@@ -20,7 +19,7 @@
           config.allowUnfree = true;
         };
       in {
-        boot.kernelPackages = kernelPkgs.linuxPackages_latest;
+        #boot.kernelPackages = kernelPkgs.linuxPackages_latest;
         
         #environment.systemPackages = with kernelPkgs; [
           #bonsai

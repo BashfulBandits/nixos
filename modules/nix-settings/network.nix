@@ -6,18 +6,18 @@
 
     wireless = {
       enable = false;
-      secretsFile = "/home/ontos/nixos/secrets/network.env";
+      #secretsFile = "/home/ontos/nixos/secrets/network.env";
 
-      networks = {
-        "SpectrumSetup-4D" = {
-          psk = "@HOME_WIFI_PASSWORD@";
-        };
-      };
+      #networks = {
+        #"SpectrumSetup-4D" = {
+          #psk = "@HOME_WIFI_PASSWORD@";
+        #};
+      #};
     };
 
     networkmanager = {
       enable = true;
-      unmanaged = ["*" "except:type:wwan" "except:type:gsm"];
+      #unmanaged = ["*" "except:type:wwan" "except:type:gsm"];
 
       wifi = {
         backend = "iwd";
