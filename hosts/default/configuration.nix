@@ -33,6 +33,8 @@
 
       ../../modules/system/editors/default.nix
 
+      ../../modules/system/linux/kernel/latest.nix
+
 
       ../../modules/nix-settings/fonts/fonts.nix
       ../../modules/nix-settings/sound.nix

@@ -20,11 +20,11 @@
           config.allowUnfree = true;
         };
       in {
-        boot.kernelPackages = kernelPkgs.linuxPackages_latest.kernel;
+        boot.kernelPackages = kernelPkgs.linuxPackages_latest;
         
-        environment.systemPackages = with kernelPkgs; [
-          bonsai
-        ];
+        #environment.systemPackages = with kernelPkgs; [
+          #bonsai
+        #];
       };
   };
 }
