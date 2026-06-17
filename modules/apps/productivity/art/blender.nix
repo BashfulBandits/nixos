@@ -1,10 +1,9 @@
 { inputs, pkgs, ... }:
 
+(blender.override {cudaSupport = true;})
 
 {
   nixpkgs.config.cudaSupport = true;
-
-  (blender.override {cudaSupport = true;})
 
   environment.systemPackages = with pkgs; [
     blender 
