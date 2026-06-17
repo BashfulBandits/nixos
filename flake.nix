@@ -31,6 +31,9 @@
     # System Config Flakes
 
     linux-kernel-flake.url = "path:./modules/system/linux/kernel";
+
+    blender-flake.url = "path:./modules/apps/art/blender";
+    
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: {
@@ -40,6 +43,7 @@
         ./hosts/default/configuration.nix
 
         inputs.linux-kernel-flake.nixosModules.latest-kernel
+        inputs.blender-flake.nixosModules.blender-cuda
 
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
