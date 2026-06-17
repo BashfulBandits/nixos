@@ -10,12 +10,16 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    btop
+
     pkgs.CuboCore.coreshot
 
     hyprshot
     wl-clipboard
 
     gscreenshot
+
+    dust
 
     mpv
     stow

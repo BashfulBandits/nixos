@@ -3,6 +3,9 @@
 {
   # Fonts
   fonts.packages = with pkgs; [
+    corefonts
+    vista-fonts
+
     noto-fonts
     nerd-fonts._0xproto
     nerd-fonts._3270

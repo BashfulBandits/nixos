@@ -1,14 +1,11 @@
 { inputs, pkgs, ... }:
 
-#nixpkgs.config.cudaSupport = true;
-
 {
+  imports = [
+    ./blender.nix
+  ];
+
   environment.systemPackages = with pkgs; [
-    #(blender.override {
-        #cudaSupport = true;
-    #})
-    #blender 
-    #cudaPackages.cudatoolkit
 
     #aseprite
     krita

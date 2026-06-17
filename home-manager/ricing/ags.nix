@@ -12,9 +12,8 @@
       inputs.astal.packages.${pkgs.system}.battery
       inputs.astal.packages.${pkgs.system}.hyprland
       inputs.astal.packages.${pkgs.system}.tray
+      inputs.astal.packages.${pkgs.system}.notifd
       fzf
     ];
   };
-
-  home.packages = [ inputs.astal.packages.${pkgs.system}.notifd ];
 }
