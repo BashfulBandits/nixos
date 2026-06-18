@@ -20,6 +20,8 @@
       ../../modules/coding/default.nix
 
 
+      ../../modules/system/swapfile.nix
+
       ../../modules/system/utils/default.nix
       ../../modules/system/utils/nix-utils.nix
 

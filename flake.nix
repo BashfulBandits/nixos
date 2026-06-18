@@ -43,7 +43,7 @@
         ./hosts/default/configuration.nix
 
         inputs.linux-kernel-flake.nixosModules.latest-kernel
-        inputs.blender-flake.nixosModules.blender-cuda
+        #inputs.blender-flake.nixosModules.blender-cuda
 
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
