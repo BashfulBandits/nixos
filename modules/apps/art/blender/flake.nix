@@ -19,13 +19,13 @@
           config.allowUnfree = true;
         };
       in {
-        nixpkgs.config.cudaSupport = true;
+        #nixpkgs.config.cudaSupport = true;
 
         environment.systemPackages = with pkgs; [
           (blender.override {cudaSupport = true;})
 
           blender 
-          cudaPackages.cudatoolkit
+          #cudaPackages.cudatoolkit
         ];
       };
   };
