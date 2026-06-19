@@ -14,6 +14,11 @@
 
     pkgs.CuboCore.coreshot
 
+    vlc
+    libvlc
+
+    ffmpeg-full
+
     hyprshot
     wl-clipboard
 
