@@ -28,8 +28,6 @@
 
     mpv
     stow
-    bitwarden-desktop
-    bitwarden-cli 
     kdePackages.dolphin
     xmodmap
     #xbindkeys

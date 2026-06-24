@@ -6,7 +6,7 @@
   ];
 
   imports = [
-    ./vscodium.nix
+    #./vscodium.nix
     ./nvim.nix
   ];
 }
