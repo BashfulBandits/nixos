@@ -1,11 +1,13 @@
 { pkgs, ... }:
+
 {
-  environment.systemPackages = with pkgs; [
-    librewolf-unwrapped
-    pywalfox-native
+  nixpkgs.config.permittedInsecurePackages = [
+    #"librewolf-unwrapped-151.0.2-1"
+    "librewolf-151.0.2-1"
   ];
 
-  permittedInsecurePackages = [
-    "librewolf-unwrapped-151.0.1-2"
+  environment.systemPackages = with pkgs; [
+    librewolf
+    pywalfox-native
   ];
 }
