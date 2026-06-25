@@ -2,7 +2,7 @@
 
 {
   nixpkgs.config.permittedInsecurePackages = [
-    #"librewolf-unwrapped-151.0.2-1"
+    "librewolf-unwrapped-151.0.2-1"
     "librewolf-151.0.2-1"
   ];
 
