@@ -12,7 +12,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    #spotify
+    spotify
     ncspot
     #lutris
     mangohud
