@@ -1,8 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = []; 
-  environment.systemPackages = with pkgs; [
-    neovim
-  ];
+  imports = [
+    ./nvim.nix
+  ]; 
 }

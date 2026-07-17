@@ -20,7 +20,10 @@
     osu-lazer-bin
     azahar
     melonds
+
     prismlauncher
+    lunar-client
+
     jdk25
     zulu8
   ];
