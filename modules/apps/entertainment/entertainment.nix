@@ -22,6 +22,7 @@
     melonds
 
     prismlauncher
+    worldpainter
     lunar-client
 
     jdk25

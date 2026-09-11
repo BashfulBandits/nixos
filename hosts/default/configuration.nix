@@ -199,11 +199,11 @@
     (import ../../scripts/nix-os-rebuild.nix {inherit pkgs; })
   ];
 
-  fileSystems."/mnt/windows" = {
-    device = "/dev/disk/by-uuid/FAB8DFE2B8DF9B87"; # your actual UUID
-    fsType = "ntfs3"; # modern kernel driver; use "ntfs-3g" for the FUSE alternative
-    options = [ "rw" "uid=1000" "gid=100" "umask=022" "windows_names" ];
-  };
+  #fileSystems."/media/windows" = {
+    #device = "/dev/disk/by-uuid/FAB8DFE2B8DF9B87"; # your actual UUID
+    #fsType = "ntfs3"; # modern kernel driver; use "ntfs-3g" for the FUSE alternative
+    #options = [ "rw" "uid=1000" "gid=100" "umask=022" "windows_names" ];
+  #};
 
   # Flatpak
   services.flatpak.enable = true;
