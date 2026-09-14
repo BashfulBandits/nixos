@@ -12,7 +12,6 @@
 
       ../../modules/apps/core/browsers
       ../../modules/apps/entertainment/entertainment.nix
-      ../../modules/apps/productivity/organization/default.nix
       ../../modules/apps/productivity/art/default.nix
       ../../modules/apps/vpn.nix
 
