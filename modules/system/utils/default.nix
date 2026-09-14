@@ -12,6 +12,8 @@
   environment.systemPackages = with pkgs; [
     btop
 
+    mmv
+
     pkgs.CuboCore.coreshot
 
     vlc
