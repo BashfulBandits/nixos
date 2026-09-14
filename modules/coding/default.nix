@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -6,5 +6,9 @@
     ./languages/default.nix
     ./mysql.nix
     ./docker.nix
+  ];
+    
+  environment.systemPackages = with pkgs; [
+    devenv
   ];
 }
