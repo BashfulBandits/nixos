@@ -774,6 +774,22 @@
     },
     "nixpkgs_10": {
       "locked": {
+        "lastModified": 1789149629,
+        "narHash": "sha256-H6GwaZzZf+4npqv0tph94w9tZddSjFjmQrVsW0z78uk=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "eaad089433ca2bb662274377d33df3d0e51ef28b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_11": {
+      "locked": {
         "lastModified": 1780243769,
         "narHash": "sha256-x5UQuRsH3MqI0U9afaXSNqzTPSeZlRLvFAav2Ux1pNw=",
         "owner": "NixOS",
@@ -941,6 +957,20 @@
         "type": "github"
       }
     },
+    "obsidian-flake": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_10"
+      },
+      "locked": {
+        "path": "./modules/apps/productivity/obsidian",
+        "type": "path"
+      },
+      "original": {
+        "path": "./modules/apps/productivity/obsidian",
+        "type": "path"
+      },
+      "parent": []
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -977,6 +1007,7 @@
         "matugen": "matugen",
         "nix-colors": "nix-colors",
         "nixpkgs": "nixpkgs_9",
+        "obsidian-flake": "obsidian-flake",
         "stylix": "stylix"
       }
     },
@@ -1010,7 +1041,7 @@
         "firefox-gnome-theme": "firefox-gnome-theme",
         "flake-parts": "flake-parts",
         "gnome-shell": "gnome-shell",
-        "nixpkgs": "nixpkgs_10",
+        "nixpkgs": "nixpkgs_11",
         "nur": "nur",
         "systems": "systems_3",
         "tinted-kitty": "tinted-kitty",

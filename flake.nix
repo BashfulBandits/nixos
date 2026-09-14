@@ -33,7 +33,8 @@
     linux-kernel-flake.url = "path:./modules/system/linux/kernel";
 
     blender-flake.url = "path:./modules/apps/art/blender";
-    
+
+    obsidian-flake.url = "path:./modules/apps/productivity/obsidian"; 
   };
 
   outputs = { self, nixpkgs, ... } @ inputs: {
@@ -44,6 +45,7 @@
 
         inputs.linux-kernel-flake.nixosModules.latest-kernel
         inputs.blender-flake.nixosModules.blender-cuda
+        inputs.obsidian-flake.nixosModules.latest-obsidian
 
         inputs.home-manager.nixosModules.default
         inputs.stylix.nixosModules.stylix
