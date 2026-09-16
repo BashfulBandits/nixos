@@ -3,8 +3,8 @@
 pkgs.writeShellScriptBin "nr" ''
   set -e
   pushd ~/nixos/ &> /dev/null
-  git diff -U0 -- '*.nix'
-  git add -A
+  ${pkgs.git} diff -U0 -- '*.nix'
+  ${pkgs.git} add -A
   while true; do
       read -r -p "Continue? [y/n] " answer
       case "$answer" in
@@ -15,13 +15,12 @@ pkgs.writeShellScriptBin "nr" ''
   done
   echo "Nixos rebuilding..."
   sudo nixos-rebuild switch --flake ~/nixos#default &> nixos-rebuild.log || (
-      #cat nixos-switch.log | grep --color error && false)
       cat nixos-rebuild.log | sed -n '/[Ee]rror:[[:space:]]\+\S/,/^\^/{/^\^/!p}')
-  gen=$(nixos-rebuild list-generations | grep True)
   
   result=$(cat nixos-rebuild.log | sed -n '/[Ee]rror:[[:space:]]\+\S/,/^\^/{/^\^/!p}')
   if [ -z "$result" ]; then
-      {pkgs.git} commit -am "$gen"
+      gen=$(nixos-rebuild list-generations | grep True)
+      ${pkgs.git} commit -am "$gen"
       echo ""
       echo "\nRebuild complete"
   fi
