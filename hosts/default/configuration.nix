@@ -170,7 +170,6 @@
     picom
     yazi
     libnotify
-    tree-sitter
     binutils
     languagetool
     wget

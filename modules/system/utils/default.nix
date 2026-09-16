@@ -32,6 +32,7 @@
     stow
     kdePackages.dolphin
     xmodmap
+    feh
     #xbindkeys
     #xbindkeys-config
 
