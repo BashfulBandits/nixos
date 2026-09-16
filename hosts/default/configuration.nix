@@ -1,7 +1,5 @@
 { config, pkgs, inputs, ... }:
 
-# this is a test comment
-
 {
   imports =
     [ # Include the results of the hardware scan.
