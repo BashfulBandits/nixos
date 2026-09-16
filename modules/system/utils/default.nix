@@ -12,6 +12,9 @@
   environment.systemPackages = with pkgs; [
     btop
 
+    grim
+    slurp
+
     mmv
 
     pkgs.CuboCore.coreshot
