@@ -193,7 +193,7 @@
     calibre
 
 
-    (import ../../scripts/nix-os-rebuild.nix {inherit pkgs; })
+    (import ../../scripts/nixos-rebuild.nix {inherit pkgs; })
   ];
 
   #fileSystems."/media/windows" = {
