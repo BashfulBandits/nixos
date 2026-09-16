@@ -4,7 +4,6 @@ pkgs.writeShellScriptBin "nr" ''
   set -e
   pushd ~/nixos/ &> /dev/null
   ${pkgs.git}/bin/git diff -U0 -- '*.nix'
-  ${pkgs.git}/bin/git add -A
   while true; do
       read -r -p "Continue? [y/n] " answer
       case "$answer" in
@@ -13,6 +12,7 @@ pkgs.writeShellScriptBin "nr" ''
           *) echo "Please answer y or n." ;;
       esac
   done
+  ${pkgs.git}/bin/git add -A
   echo "Nixos rebuilding..."
   sudo nixos-rebuild switch --flake ~/nixos#default &> nixos-rebuild.log || (
       cat nixos-rebuild.log | sed -n '/[Ee]rror:[[:space:]]\+\S/,/^\^/{/^\^/!p}')
