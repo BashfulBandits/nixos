@@ -4,7 +4,6 @@
 
 { config, pkgs, inputs, ... }:
 
-otanrset
 {
   imports =
     [ # Include the results of the hardware scan.
