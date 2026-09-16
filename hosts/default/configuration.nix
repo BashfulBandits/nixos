@@ -3,6 +3,7 @@
 # this is a test comment
 
 {
+tnarseotn
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
