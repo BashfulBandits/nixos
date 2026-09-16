@@ -20,6 +20,8 @@
   ];
 
   #colorScheme = inputs.nix-colors.colorSchemes.gruvbox-dark-medium;
+  # I dont think this does anything
+  # Flag it for deletion
   colorScheme = {
     palette = {
       base1 = "#11113f";
