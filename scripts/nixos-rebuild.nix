@@ -21,7 +21,8 @@ pkgs.writeShellScriptBin "nr" ''
   
   result=$(cat nixos-rebuild.log | sed -n '/[Ee]rror:[[:space:]]\+\S/,/^\^/{/^\^/!p}')
   if [ -z "$result" ]; then
-      git commit -am "$gen"
+      {pkgs.git} commit -am "$gen"
+      echo ""
       echo "\nRebuild complete"
   fi
   popd &> /dev/null
