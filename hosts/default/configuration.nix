@@ -161,8 +161,8 @@
     networkmanagerapplet
     feh
     git
-    discord
     libreoffice
+    discord
     #libsForQt5.kdenlive
     lazygit
     xclip
