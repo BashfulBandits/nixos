@@ -22,7 +22,7 @@ pkgs.writeShellScriptBin "nr" ''
       gen=$(nixos-rebuild list-generations | grep True)
       ${pkgs.git}/bin/git commit -am "$gen"
       echo ""
-      echo "\nRebuild complete"
+      echo "Rebuild Complete!"
   fi
   popd &> /dev/null
 ''
