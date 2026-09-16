@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     tree-sitter
-    neovim
+    #neovim
   ];
+
+  programs.neovim.enable = true;
 }
