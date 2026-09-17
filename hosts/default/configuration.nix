@@ -191,6 +191,7 @@
 
 
     (import ../../scripts/nixos-rebuild.nix {inherit pkgs; })
+    (import ../../scripts/screenshot.nix {inherit pkgs; })
   ];
 
   #fileSystems."/media/windows" = {

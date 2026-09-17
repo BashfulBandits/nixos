@@ -4,7 +4,6 @@
   programs.hyprland.enable = true;
 
   environment.systemPackages = with pkgs; [
-    grim
-    slurp
+    (import ../../../scripts/screenshot.nix {inherit pkgs; })
   ];
 }
